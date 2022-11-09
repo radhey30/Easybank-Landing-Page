@@ -27,15 +27,16 @@ html {
 main {
     .desktop-image {
         position: absolute;
-        top: -200px;
-        right: -310px;
+        right: -200px;    
         .intro-desktop {
             position: relative;
+            top: -345px;
+            left: 100px;
         }
         .image-mockup {
             position: absolute;
-            top: 90px;
-            left: 130px;
+            top: -250px;
+            left: 235px;
         }
     }
 }
