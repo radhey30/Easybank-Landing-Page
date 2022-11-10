@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;700&display=swap");
+@import url("/_media.css");
 :root {
   --primary-clr-db: hsl(233, 26%, 24%);
   --primary-clr-lg: hsl(136, 65%, 51%);
@@ -17,10 +18,40 @@
   margin: 0;
   box-sizing: border-box;
   font-family: "Public Sans", sans-serif;
+  transition: all 1s;
 }
 
 html {
   overflow-x: hidden;
+}
+
+header {
+  position: -webkit-sticky;
+  position: sticky;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  background-color: var(--neutral-clr-white);
+  z-index: 1;
+  padding: 1em;
+}
+header nav > ul {
+  height: 100%;
+  list-style-type: none;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+header nav > ul li > a {
+  text-decoration: none;
+}
+header .button {
+  text-align: right;
+}
+header .button img {
+  margin-top: 15px;
+}
+header .image img {
+  margin-top: 10px;
 }
 
 main .desktop-image {
@@ -36,4 +67,43 @@ main .desktop-image .image-mockup {
   position: absolute;
   top: -250px;
   left: 235px;
+}
+
+@media (max-width: 700px) and (min-width: 500px) {
+  .intro-desktop img, .image-mockup img {
+    height: 600px;
+  }
+}
+@media (max-width: 500px) {
+  .intro-desktop img, .image-mockup img {
+    height: 450px;
+  }
+  .intro-desktop {
+    margin-right: 220px;
+  }
+}
+@media (max-width: 700px) {
+  header {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  header nav, header button {
+    display: none;
+  }
+}
+@media (min-width: 700px) {
+  header .button > img {
+    display: none;
+  }
+}
+.gray-small {
+  color: var(--neutral-clr-gb);
+}
+
+.request-btn {
+  text-align: center;
+  border: none;
+  border-radius: 100px;
+  color: var(--neutral-clr-white);
+  padding: 0.75em 1.5em;
+  background: linear-gradient(to right, var(--primary-clr-lg), var(--primary-clr-bc));
 }/*# sourceMappingURL=style.css.map */
